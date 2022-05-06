@@ -12,6 +12,14 @@ view: delayed_fligths_location {
   }
   dimension: city {
     description: ""
+    html: {% if value == 'LOS ANGELES' %}
+    <p style="color: black; background-color: lightblue; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif value == 'ATLANTA' %}
+    <p style="color: black; background-color: lightgreen; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; background-color: orange; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %}
+    ;;
   }
   dimension: origin {
     description: ""
