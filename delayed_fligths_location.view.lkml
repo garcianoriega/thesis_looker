@@ -14,6 +14,8 @@ view: delayed_fligths_location {
     description: ""
     html: {% if value == 'LOS ANGELES' %}
    <p><img src="http://findicons.com/files/icons/573/must_have/48/check.png" height=20 width=20>{{ rendered_value }}</p>
+    {% else %}
+    <p>{{ rendered_value }}</p>
     {% endif %}
     ;;
   }
